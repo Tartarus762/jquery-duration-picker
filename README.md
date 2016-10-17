@@ -95,6 +95,8 @@ $('#duration-picker').durationPicker({
 });
 ```
 
+If you put any options in, you must specify all options you require, for example, putting centuries in will not put centuries in front of the default, it will only have centuries.
+
 ## Using the data:
 
 You can get the output from the picker either from post data if it's in a form, the same way you do for any input, or by calling .val() on the original element. The data will be comma separated. For example:
