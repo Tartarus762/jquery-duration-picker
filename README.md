@@ -30,12 +30,12 @@ To specify options for the plugin, do the following:
 ```
 $('#duration-picker').durationPicker({
   stages: {
-    centuries: true,
-    decades: true,
-    years: true,
-    months: true,
-    hours: true,
-    ...
+	centuries: true,
+	decades: true,
+	years: true,
+	months: true,
+	hours: true,
+	...
   },
   labels: {
     centuries: "C",
@@ -93,4 +93,31 @@ $('#duration-picker').durationPicker({
   },
   class: "myclass"
 });
+```
+
+## Using the data:
+
+You can get the output from the picker either from post data if it's in a form, the same way you do for any input, or by calling .val() on the original element. The data will be comma separated. For example:
+
+Using Django to get an array of values:
+```
+if request.POST:
+  items = request.POST['duration-picker'].split(',')
+  print(items)
+```
+
+Results in (by default, no input):
+```
+[0h, 0m, 0s]
+```
+
+Using jQuery:
+```
+var items = $('#duration-picker').val().split(",");
+console.log(items);
+```
+
+Results in (by default, no input):
+```
+[0h, 0m, 0s]
 ```
