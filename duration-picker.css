@@ -15,7 +15,8 @@
     width: 50px;
     display: inline-block;
     border: none;
-    padding-left: 10%
+    padding-left: 10%;
+    text-align: right;
 }
 
 .durationpicker-label {
