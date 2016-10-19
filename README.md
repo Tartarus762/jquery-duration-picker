@@ -82,3 +82,6 @@ Results in (by default, no input):
 ```
 [0h, 0m, 0s]
 ```
+
+Here is an example of what it might look like:
+![example](https://raw.githubusercontent.com/Tartarus762/jquery-duration-picker/duration-picker-ex.jpg)
