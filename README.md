@@ -54,7 +54,7 @@ $('#duration-picker').durationPicker({
 });
 ```
 
-If you put any options in, you must specify all options you require, for example, putting centuries in will not put centuries in front of the default, it will only have centuries.
+If you put any options in, you must specify all options you require, for example, putting centuries in will not put centuries in front of the default, it will only have centuries. The exception to this is: not specifying classname will result in it having the class: form-control.
 
 ## Using the data:
 
