@@ -9,6 +9,7 @@
         this.template = generate_template(this.settings);
         this.element = $(element);
         this.setup();
+        $(".durationpicker-duration").trigger('change');
         var _self = this;
     };
 
