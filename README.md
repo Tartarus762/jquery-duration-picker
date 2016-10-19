@@ -84,4 +84,5 @@ Results in (by default, no input):
 ```
 
 Here is an example of what it might look like:
+
 ![example](https://raw.githubusercontent.com/Tartarus762/jquery-duration-picker/master/duration-picker-ex.jpg)
