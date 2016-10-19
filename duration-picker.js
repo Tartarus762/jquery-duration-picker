@@ -30,7 +30,8 @@
                 });
                 value = value.slice(0, -1);
                 element.val(value);
-            })
+            });
+            // $(".durationpicker-duration").trigger();
         }
     };
 
@@ -40,7 +41,7 @@
             var settings = $.extend(true, {}, $.fn.durationPicker.defaults, options);
         }
         else {
-            var settings = $.extend(true, {}, {}, options);
+            var settings = $.extend(true, {}, {classname: 'form-control'}, options);
         }
 
         return this.each(function () {
@@ -50,15 +51,15 @@
 
     function generate_template (settings) {
         var stages = [];
-        for (var key in Object.keys(settings.stages)){
-            if (settings.stages[Object.keys(settings.stages)[key]]) {
-                stages.push(Object.keys(settings.stages)[key]);
+        for (var key in Object.keys(settings)){
+            if (Object.keys(settings)[key] != 'classname') {
+                stages.push(Object.keys(settings)[key]);
             }
         }
 
-        var html = '<div class="durationpicker-container ' + settings.class + '">';
+        var html = '<div class="durationpicker-container ' + settings.classname + '">';
         for (var item in stages){
-            html += '<div class="durationpicker-innercontainer"><input placeholder="0" type="number" id="duration-' + item + '" class="durationpicker-duration" ><span class="durationpicker-label">' + settings.labels[stages[item]] + '</span></div>';
+            html += '<div class="durationpicker-innercontainer"><input min="' + settings[stages[item]]['min'] + '" max="' + settings[stages[item]]['max'] + '" placeholder="0" type="number" id="duration-' + stages[item] + '" class="durationpicker-duration" ><span class="durationpicker-label">' + settings[stages[item]]['label'] + '</span></div>';
         }
         html += '</div>';
 
@@ -66,17 +67,22 @@
     }
 
     $.fn.durationPicker.defaults = {
-        stages: {
-            hours: true,
-            minutes: true,
-            seconds: true
+        hours: {
+        	label: "h",
+        	min: 0,
+        	max: 24
         },
-        labels: {
-            hours: 'h',
-            minutes: 'm',
-            seconds: 's'
+        minutes: {
+        	label: "m",
+        	min: 0,
+        	max: 24
         },
-        class: 'form-control'
+        seconds: {
+        	label: "s",
+        	min: 0,
+        	max: 24
+        },
+        classname: 'form-control'
     };
 
     $.fn.durationPicker.Constructor = durationPicker;
