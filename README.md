@@ -1,6 +1,10 @@
 # jquery-duration-picker
 A jQuery plugin for picking a duration of any length
 
+Example:
+
+![example](https://raw.githubusercontent.com/Tartarus762/jquery-duration-picker/master/duration-picker-ex.jpg)
+
 ## Requirements:
 
 jQuery 1.8+
@@ -82,7 +86,3 @@ Results in (by default, no input):
 ```
 [0h, 0m, 0s]
 ```
-
-Here is an example of what it might look like:
-
-![example](https://raw.githubusercontent.com/Tartarus762/jquery-duration-picker/master/duration-picker-ex.jpg)
