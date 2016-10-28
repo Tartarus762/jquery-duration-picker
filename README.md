@@ -11,7 +11,7 @@ jQuery 1.8+
 
 ## Installation:
 
-Download duration-picker.js and duration-picker.css and include both in your html.
+Download duration-picker.js and duration-picker.css and include both.
 
 ## Usage:
 
