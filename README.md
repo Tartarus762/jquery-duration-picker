@@ -43,8 +43,21 @@ $('#duration-picker').durationPicker({
     min: 0,
     max: 60
   },
-  classname: "myclass"
+  classname: "myclass",
+  responsive: true
 });
+```
+# classname:
+This specifies the class that will be added to the outermost container. Use this to control the appearance of the picker.
+default: form-control
+
+# Responsive mode:
+If this is set to true, when the parent element becomes too narrow, possibly due to being viewed on a small screen, the individual inputs will display vertically instead of just moving randomly. This is set to true by default, if you don't want this, set it to false as below:
+```
+...
+  classname: "myclass",
+  responsive: false
+...
 ```
 Note that you don't actually have to put in units of time, for example, this is also correct:
 ```
@@ -58,7 +71,7 @@ $('#duration-picker').durationPicker({
 });
 ```
 
-If you put any options in, you must specify all options you require, for example, putting centuries in will not put centuries in front of the default, it will only have centuries. The exception to this is: not specifying classname will result in it having the class: form-control.
+If you put any options in, you must specify all options you require, for example, putting centuries in will not put centuries in front of the default, it will only have centuries. The exception to this is: not specifying classname will result in it having the class: form-control. Similarly not specifying responsive will result in responsive: true.
 
 ## Using the data:
 
