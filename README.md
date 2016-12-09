@@ -47,11 +47,11 @@ $('#duration-picker').durationPicker({
   responsive: true
 });
 ```
-# classname:
+### classname:
 This specifies the class that will be added to the outermost container. Use this to control the appearance of the picker.
 default: form-control
 
-# Responsive mode:
+### Responsive mode:
 If this is set to true, when the parent element becomes too narrow, possibly due to being viewed on a small screen, the individual inputs will display vertically instead of just moving randomly. This is set to true by default, if you don't want this, set it to false as below:
 ```
 ...
