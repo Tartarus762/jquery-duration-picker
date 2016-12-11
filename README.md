@@ -5,6 +5,10 @@ Example:
 
 ![example](https://raw.githubusercontent.com/Tartarus762/jquery-duration-picker/master/duration-picker-ex.jpg)
 
+Try it out for yourself:
+
+![JSFiddle](https://jsfiddle.net/0odpuwv9/)
+
 ## Requirements:
 
 jQuery 1.8+
