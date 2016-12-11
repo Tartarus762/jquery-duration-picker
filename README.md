@@ -7,7 +7,7 @@ Example:
 
 Try it out for yourself:
 
-![JSFiddle](https://jsfiddle.net/0odpuwv9/)
+<https://jsfiddle.net/0odpuwv9/>
 
 ## Requirements:
 
