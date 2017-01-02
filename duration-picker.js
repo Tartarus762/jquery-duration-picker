@@ -107,12 +107,12 @@
         minutes: {
         	label: "m",
         	min: 0,
-        	max: 24
+        	max: 59
         },
         seconds: {
         	label: "s",
         	min: 0,
-        	max: 24
+        	max: 59
         },
         classname: 'form-control',
         responsive: true
