@@ -33,6 +33,14 @@ $('#duration-picker').durationPicker();
 This will inititalise the duration picker with default options: hours, minutes and seconds with the labels: h, m, s.
 Will also have a bootstrap class, which can be changed in the options.
 
+Use the following to get the jquery reference to the new item, useful for calling hide() on it for example.
+```
+var durationpicker = $('#duration-picker').durationPicker();
+// This gets a jquery reference to the new durationpicker in the dom
+var item = durationpicker.getitem();
+item.hide();
+```
+
 ## Options:
 To specify options for the plugin, do the following:
 ```
