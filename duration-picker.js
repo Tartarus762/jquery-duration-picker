@@ -39,7 +39,6 @@
             window.addEventListener('resize', this.resize);
         },
         resize: function() {
-            console.log(this.settings);
             if (!this.settings.responsive) {
                 return
             }
@@ -64,9 +63,11 @@
                     ths.css('display', 'inline-block');
                 });
             }
+        },
+        getitem: function () {
+            return this.jqitem;
         }
     };
-
 
     $.fn.durationPicker = function(options){
         if (options == undefined) {
@@ -76,9 +77,9 @@
             var settings = $.extend(true, {}, {classname: 'form-control', responsive: true}, options);
         }
 
-        return this.each(function () {
-            return new durationPicker(this, settings)
-        })
+        // return this.each(function () {
+        return new durationPicker(this, settings);
+        // })
     };
 
     function generate_template (settings) {
