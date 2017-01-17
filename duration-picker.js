@@ -12,7 +12,7 @@
         this.element = $(element);
         this.setup();
         this.resize();
-        $(".durationpicker-duration").trigger('change');
+        this.jqchildren.find(".durationpicker-duration").trigger('change');
         var _self = this;
     };
 
@@ -21,7 +21,7 @@
         setup: function () {
             this.element.before(this.jqitem);
             this.element.hide();
-            $(".durationpicker-duration").on('change', {ths: this}, function (ev) {
+            this.jqchildren.find(".durationpicker-duration").on('change', {ths: this}, function (ev) {
                 var element = ev.data.ths.element;
                 var value = "";
                 $(this).parent().parent().find('input').each(function () {
