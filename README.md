@@ -52,6 +52,13 @@ var durationpicker = $('#duration-picker').durationPicker();
 values = {hours: 2, minutes: 27, seconds: 13};
 durationpicker.setvalues(values);
 ```
+You can set the value for any number of the inputs. Only the ones you included in value will be updated, for example:
+```
+// This will only update the hours and seconds while leaving minutes alone.
+values = {hours: 2, seconds: 13};
+durationpicker.setvalues(values);
+```
+
 
 ## Options:
 To specify options for the plugin, do the following:
