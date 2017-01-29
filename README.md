@@ -59,6 +59,14 @@ values = {hours: 2, seconds: 13};
 durationpicker.setvalues(values);
 ```
 
+### enable() and disable():
+disable makes all the inputs in the picker readonly and enable does the opposite:
+```
+// All inputs now readOnly
+picker.disable();
+// All inputs no longer readOnly
+picker.enable();
+```
 
 ## Options:
 To specify options for the plugin, do the following:
