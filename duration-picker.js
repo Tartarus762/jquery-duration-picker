@@ -87,8 +87,10 @@
     };
 
     function set_values(values, self){
-        for (var value in values){
-            self.jqitem.find("#duration-" + self.stages[value]).val(values[value]);
+        for (var value in Object.keys(values)){
+            if (self.stages.indexOf(Object.keys(values)[value]) != -1){
+                self.jqitem.find("#duration-" + (Object.keys(values)[value])).val(values[(Object.keys(values)[value])]);
+            }
         }
     }
 
