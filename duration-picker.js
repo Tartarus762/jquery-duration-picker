@@ -6,7 +6,8 @@
     // Constructor for durationpicker 'class'
     var durationPicker = function (element, options) {
         this.settings = options;
-        this.template = generate_template(this.settings);
+        this.stages = get_stages(this.settings);
+        this.template = generate_template(this.settings, this.stages);
         this.jqitem = $(this.template);
         this.jqchildren = this.jqitem.children();
         this.element = $(element);
@@ -66,6 +67,9 @@
         },
         getitem: function () {
             return this.jqitem;
+        },
+        setvalues: function (values) {
+            set_values(values, this)
         }
     };
 
@@ -82,13 +86,29 @@
         // })
     };
 
-    function generate_template (settings) {
+    function set_values(values, self){
+        for (var value in values){
+            self.jqitem.find("#duration-" + self.stages[value]).val(values[value]);
+        }
+    }
+
+    function get_stages(settings){
         var stages = [];
         for (var key in Object.keys(settings)){
             if (['classname', 'responsive'].indexOf(Object.keys(settings)[key]) == -1) {
                 stages.push(Object.keys(settings)[key]);
             }
         }
+        return stages
+    }
+
+    function generate_template (settings, stages) {
+        // var stages = [];
+        // for (var key in Object.keys(settings)){
+        //     if (['classname', 'responsive'].indexOf(Object.keys(settings)[key]) == -1) {
+        //         stages.push(Object.keys(settings)[key]);
+        //     }
+        // }
 
         var html = '<div class="durationpicker-container ' + settings.classname + '">';
         for (var item in stages){
