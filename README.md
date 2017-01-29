@@ -44,6 +44,15 @@ var item = durationpicker.getitem();
 item.hide();
 ```
 
+### setvalues():
+Use this to set the values of the inputs manually. It takes a dict that has the same keys as were used to create the picker. If it's default, they would be hours, minutes, seconds (they will be whatever they appear to be in the labels within the picker).
+```
+var durationpicker = $('#duration-picker').durationPicker();
+// Default is hours, minutes, seconds, so we need 3 items
+values = {hours: 2, minutes: 27, seconds: 13};
+durationpicker.setvalues(values);
+```
+
 ## Options:
 To specify options for the plugin, do the following:
 ```
