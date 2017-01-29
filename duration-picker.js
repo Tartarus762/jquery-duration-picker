@@ -70,6 +70,16 @@
         },
         setvalues: function (values) {
             set_values(values, this)
+        },
+        disable: function () {
+            this.jqchildren.children("input").each(function (index, item) {
+                item.readOnly = true;
+            });
+        },
+        enable: function () {
+            this.jqchildren.children("input").each(function (index, item) {
+                item.readOnly = false;
+            });
         }
     };
 
