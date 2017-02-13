@@ -88,7 +88,7 @@
             var settings = $.extend(true, {}, $.fn.durationPicker.defaults, options);
         }
         else {
-            var settings = $.extend(true, {}, {classname: 'form-control', responsive: true}, options);
+            var settings = $.extend(true, {}, {classname: 'form-control', responsive: true, type:'number'}, options);
         }
 
         // return this.each(function () {
@@ -107,7 +107,7 @@
     function get_stages(settings){
         var stages = [];
         for (var key in Object.keys(settings)){
-            if (['classname', 'responsive'].indexOf(Object.keys(settings)[key]) == -1) {
+            if (['classname', 'responsive', 'type'].indexOf(Object.keys(settings)[key]) == -1) {
                 stages.push(Object.keys(settings)[key]);
             }
         }
@@ -115,16 +115,10 @@
     }
 
     function generate_template (settings, stages) {
-        // var stages = [];
-        // for (var key in Object.keys(settings)){
-        //     if (['classname', 'responsive'].indexOf(Object.keys(settings)[key]) == -1) {
-        //         stages.push(Object.keys(settings)[key]);
-        //     }
-        // }
-
         var html = '<div class="durationpicker-container ' + settings.classname + '">';
+        var type = settings.type;
         for (var item in stages){
-            html += '<div class="durationpicker-innercontainer"><input min="' + settings[stages[item]]['min'] + '" max="' + settings[stages[item]]['max'] + '" placeholder="0" type="number" id="duration-' + stages[item] + '" class="durationpicker-duration" ><span class="durationpicker-label">' + settings[stages[item]]['label'] + '</span></div>';
+            html += '<div class="durationpicker-innercontainer"><input min="' + settings[stages[item]]['min'] + '" max="' + settings[stages[item]]['max'] + '" placeholder="0" type="' + type + '" id="duration-' + stages[item] + '" class="durationpicker-duration" ><span class="durationpicker-label">' + settings[stages[item]]['label'] + '</span></div>';
         }
         html += '</div>';
 
@@ -148,6 +142,7 @@
         	max: 59
         },
         classname: 'form-control',
+        type: 'number',
         responsive: true
     };
 
