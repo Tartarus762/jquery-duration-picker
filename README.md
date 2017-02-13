@@ -83,9 +83,14 @@ $('#duration-picker').durationPicker({
     max: 60
   },
   classname: "myclass",
+  type: 'number',
   responsive: true
 });
 ```
+### type:
+Specifies the type of input each input will be, this is number by default. 
+When changing this, if you don't use a valid html input type, it will be of type text.
+
 ### classname:
 This specifies the class that will be added to the outermost container. Use this to control the appearance of the picker.
 default: form-control
