@@ -36,7 +36,7 @@
                 value = value.slice(0, -1);
                 element.val(value);
             });
-            // $(".durationpicker-duration").trigger();
+            $(".durationpicker-duration").trigger();
             window.addEventListener('resize', this.resize);
         },
         resize: function() {
@@ -70,6 +70,7 @@
         },
         setvalues: function (values) {
             set_values(values, this)
+            $(".durationpicker-duration").trigger();
         },
         disable: function () {
             this.jqchildren.children("input").each(function (index, item) {
