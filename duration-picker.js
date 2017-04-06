@@ -37,7 +37,8 @@
                 element.val(value);
             });
             $(".durationpicker-duration").trigger();
-            window.addEventListener('resize', this.resize);
+            window.addEventListener('resize', this.resize.bind(this));
+
         },
         resize: function() {
             if (!this.settings.responsive) {
