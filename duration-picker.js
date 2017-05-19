@@ -36,7 +36,7 @@
                 value = value.slice(0, -1);
                 element.val(value);
             });
-            $(".durationpicker-duration").trigger();
+            $(".durationpicker-duration").trigger('change');
             window.addEventListener('resize', this.resize.bind(this));
 
         },
