@@ -31,7 +31,7 @@
                     if (input.val() != null && input.val() != ""){
                         val = input.val();
                     }
-                    value += val + input.next().text() + ",";
+                    value += val + " " + input.next().text() + ",";
                 });
                 value = value.slice(0, -1);
                 element.val(value);
