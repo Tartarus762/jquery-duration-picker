@@ -71,7 +71,7 @@
         },
         setvalues: function (values) {
             set_values(values, this)
-            $(".durationpicker-duration").trigger();
+            $(".durationpicker-duration").trigger('change');
         },
         disable: function () {
             this.jqchildren.children("input").each(function (index, item) {
