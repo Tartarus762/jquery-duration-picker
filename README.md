@@ -78,7 +78,7 @@ $('#duration-picker').durationPicker({
     max: 24
 	},
   minutes: {
-    label: 'minutes'
+    label: 'minutes',
     min: 0,
     max: 60
   },
